@@ -1,0 +1,1 @@
+NumberFieldsApexClass.getNumberFields('Account', '0012w00001LaxY7AAJ');
