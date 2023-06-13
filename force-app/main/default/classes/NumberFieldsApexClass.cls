@@ -1,7 +1,7 @@
 /**
  * @description       : 
  * @author            : Harshit@mirketa.com
- * @last modified on  : 06-12-2023
+ * @last modified on  : 06-13-2023
  * @last modified by  : Harshit@mirketa.com
 **/
 public class NumberFieldsApexClass {
@@ -24,13 +24,13 @@ public class NumberFieldsApexClass {
                     fieldList.add(fieldName);
                 }
                 else{
-                    fieldNames = fieldNames+ ', ' + String.valueOf(fieldName);
+                    fieldNames = fieldNames + ', ' + String.valueOf(fieldName);
                     fieldList.add(fieldName);
                 }
             }
         }
         system.debug(fieldNames);
-        if(fieldNames != ''){
+        if(fieldNames.size >= 1){
             sObject record = Database.query('SELECT ' + fieldNames + ' FROM ' + objectApiName + ' WHERE Id = \''  + id + '\'');
             for(string fieldName: fieldList){
                 if(record.get(FieldName) != null){
@@ -41,8 +41,6 @@ public class NumberFieldsApexClass {
                 }
             }     
         }
-          
-        system.debug(options);
         return options;
     }
 }

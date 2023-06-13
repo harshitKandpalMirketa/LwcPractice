@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Harshit@mirketa.com
+  @last modified on  : 06-13-2023
+  @last modified by  : Harshit@mirketa.com
+-->
+<template>
+    <lightning-card  title="Parent child event">
+        <p class="slds-p-horizontal_small">
+        <lightning-checkbox-group name="Checkbox Group"
+            label="Checkbox Group"
+            options={options}
+            value={value}
+            onchange={handleChange}></lightning-checkbox-group>
+
+            <template  if:true={comboBoxOn}>
+                <c-child-Combo-Box oncomboboxevent={handleChildValueEvent} ></c-child-Combo-Box>
+            </template>
+        </p>
+        <p slot="footer"> child Values are: {childValues}</p>
+    </lightning-card>
+</template>
