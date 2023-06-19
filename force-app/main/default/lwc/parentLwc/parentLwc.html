@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : Harshit@mirketa.com
+  @last modified on  : 06-16-2023
+  @last modified by  : Harshit@mirketa.com
+-->
+<template>
+    <lightning-card title="Parent Component" icon-name="standard:person_account">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_4-of-12">
+              <span>child one selected : {childOneSelected}</span>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+              <span>child Two selected : {childTwoSelected}</span>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+              <span>child three selected : {childThreeSelected}</span>
+            </div>
+          </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_4-of-12">
+              <span><c-child-Lwc child-number='child One' onchildevent={handleChildEvent}></c-child-Lwc></span>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+              <span><c-child-Lwc child-number='child Two' onchildevent={handleChildEvent}></c-child-Lwc></span>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+              <span><c-child-Lwc child-number='child Three' onchildevent={handleChildEvent}></c-child-Lwc></span>
+            </div>
+          </div>
+    </lightning-card>
+</template>

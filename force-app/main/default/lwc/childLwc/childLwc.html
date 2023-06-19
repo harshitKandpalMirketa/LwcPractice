@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Harshit@mirketa.com
+  @last modified on  : 06-16-2023
+  @last modified by  : Harshit@mirketa.com
+-->
+<template>
+    <lightning-card  title={childNumber} icon-name="standard:people" >
+        <div class="slds-align_absolute-center">
+            <lightning-button-stateful
+            label-when-off="Select"
+            label-when-on="Selected"
+            label-when-hover="Unselect"
+            selected={isSelected}
+            onclick={handleClick}>
+        </lightning-button-stateful>
+        </div>
+    </lightning-card>
+</template>

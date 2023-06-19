@@ -16,7 +16,10 @@
             <template  if:true={comboBoxOn}>
                 <c-child-Combo-Box oncomboboxevent={handleChildValueEvent} ></c-child-Combo-Box>
             </template>
+            <template if:true={textOn}>
+                <c-child-Text ontextevent={handleChildValueEvent}></c-child-Text>
+            </template>
         </p>
-        <p slot="footer"> child Values are: {childValues}</p>
+        <p slot="footer"> Child Values are: {childValues}</p>
     </lightning-card>
 </template>
